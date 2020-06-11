@@ -19,14 +19,16 @@ searchUser.addEventListener('keyup', (e) => {
       .then(data => {
         //-11 console.log(data);
         if (data.profile.message === 'Not Found') {
-          //-12 Show alert
+          //-12 Show alert -20 takes a msg and a class
+          ui.showAlert('User not found', 'alert alert-danger');
+
         } else {
           //-13 show profile --comes from ui.js
           ui.showProfile(data.profile);//-16 data.profile is giving us a user
         }
       })
   } else {
-    // Clear profile
-
+    //-18 Clear profile-- we call it from ui.js
+    ui.clearProfile();
   }
 });

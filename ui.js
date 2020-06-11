@@ -35,4 +35,41 @@ class UI {
     <div id="repos"></div>
   `;
   }
+
+  //-21 show alert msg
+  showAlert(message , className){
+    //Clear any remaining alert s
+    this.clearAlert();
+    // Create a div for show alert
+    const div = document.createElement('div');
+    //Add classes
+    div.className = className;
+    //Add text
+    div.appendChild(document.createTextNode(message));
+    // Get parent to insert
+    const container = document.querySelector('.searchContainer');
+    // Get search box
+    const search = document.querySelector('.search');
+    // Insert alert 
+    container.insertBefore(div, search);
+
+    // Timeout after 2 sec
+    setTimeout(()=>{
+      this.clearAlert();
+    }, 2000);
+
+  }
+  //-22 for not keep getting the user not found error-- CLEAR ALERT MESSAGE
+  clearAlert(){
+    const currentAlert = document.querySelector('.alert');
+    //so we say if there is one remove it 
+    if(currentAlert){
+      currentAlert.remove();
+    }
+  }
+
+  //-19 making a function to clear profile
+  clearProfile() {
+    this.profile.innerHTML = '';
+  }
 }
