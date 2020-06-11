@@ -12,10 +12,19 @@
   - 5 latest repos and if they are started, watched or forked
 #
 ## Tech stack 
-- Javascript
+- Javascript - JS learning objective:
+  - Fetch API
+  - Promises
+  - Async await 
+  - Classes
+  - Arrow function
+  - Event listeners
+  - File separation
 - HTML
 - Bootstrap
 - li Theme
 #
-## [Search yourself]()
-
+## [Search Yourself](https://search-for-github-users.netlify.app/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/cecd7c6a-ca58-430a-a863-9ddcf8e6e725/deploy-status)](https://app.netlify.com/sites/naughty-agnesi-105008/deploys)
+# 
+### Thank you
