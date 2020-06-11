@@ -4,6 +4,7 @@ class UI {
     this.profile = document.getElementById('profile');//== <div id="profile"></div>
 
   }
+  //Show profile
   showProfile(user) {
     //-17 console.log(user);-- we are making template literal for user now
     this.profile.innerHTML = `
@@ -35,6 +36,41 @@ class UI {
     <div id="repos"></div>
   `;
   }
+
+
+  // Show Repos---we always create a var for showing array of data 
+  showRepos(repos){
+    let output = '';
+    // making template literal
+    repos.forEach(function(repo){
+      output +=  `
+        <div class="card card-body mb-2">
+          <div class="row">
+            <div class="col-md-6">
+            <a href="${repo.html_url}" target="_blank"> ${repo.name}</a>
+            </div>
+            <div class="col-md-6">
+            <span class="badge badge-primary">Stars: ${repo.stargazers_count}</span>
+
+            <span class="badge badge-secondary">Watchers: ${repo.watchers_count}</span>
+
+            <span class="badge badge-success">Forks: ${repo.forks_count}</span>
+            </div>
+          </div>
+        </div>
+      
+      
+      `;
+    });
+    // Output repos
+    document.getElementById('repos').innerHTML = output;
+  };
+
+
+
+
+
+
 
   //-21 show alert msg
   showAlert(message , className){
